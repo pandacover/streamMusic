@@ -1,0 +1,48 @@
+.exp-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.exp-title-txt {
+    font-size: 2em;
+}
+
+.card {
+    width: 15rem;
+    margin: 10px 10px;
+    transition: all 0.3s;
+}
+
+.card-body .btn {
+    padding: 0;
+    width: 1.5em;
+    border:rgb(108, 108, 216);
+    border-radius: 100px;
+}
+
+.play:hover {
+    cursor: pointer;
+}
+
+.play-btn {
+    width: 1.5em;
+}
+
+.card-body a{
+    background: white !important;
+    border: none;
+    color: black !important;
+    display: flex;
+    transition: display 1s;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 3px 3px rgb(108, 108, 216);
+}
+
+
+footer {
+    margin: 30px 0 0 0;
+}
