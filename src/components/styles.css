@@ -46,3 +46,28 @@
 footer {
     margin: 30px 0 0 0;
 }
+
+.switch-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.switch-song {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.swt-btn {
+    margin: 0 5px;
+    padding: 5px 15px;
+    background: rgb(108, 108, 216);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px lightblue;
+}
