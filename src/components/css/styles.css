@@ -1,0 +1,14 @@
+.exp-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.exp-title-txt {
+    font-size: 2em;
+}
+
+.body-container {
+    margin: 50px;
+}

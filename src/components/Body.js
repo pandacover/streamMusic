@@ -1,108 +1,58 @@
 import React from 'react';
-import './styles.css'
+import List from './reComp/List';
+import './css/styles.css';
 
-class Body extends React.Component {
+function Body() {
 
-    handleClicks(props) {
-        alert('Now Playing Lemon Boy by CaveTown!')
-        props.preventDefault()
-    }
+        {/*Main Landing Page || Dynamically rendering songs list here || Add any songs according to the given array structure in const songs*/}
+        const songs = [
+            {
+                name: "LemonBoy",
+                thumb: "https://wallpapercave.com/wp/wp3602192.jpg",
+                artist: "Cavetown",
+                genre: "Pop"
+            },
+            {
+                name: "Stop this train",
+                thumb: "https://m.media-amazon.com/images/I/51DcBk-hOFL._SS500_.jpg",
+                artist: "Jonh Mayer",
+                genre: "Pop"
+            },
+            {
+                name: "Heather",
+                thumb: "https://64.media.tumblr.com/0f5390ff383864b81222b004bedf914f/e8942750230f5bda-2b/s540x810/16f3c688e0d10c1b6c852c8d49e72b204f8ed117.png",
+                artist: "Conan Gray",
+                genre: "Pop"
+            }
+            ,
+            {
+                name: "Peaches",
+                thumb: "https://www.the360report.com/wp-content/uploads/2021/05/Justin-Bieber-Peaches-artwork.png",
+                artist: "Justin Bieber",
+                genre: "Pop"
+            }
+        ];
 
-    render() {
         return (
             <div className="container">
                 <div className="exp-title">
-                    <span class="exp-title-txt">Hear what’s trending in the YEEEET community!</span>
+                    <div className="exp-title-txt">This is what's trending on YEEEET community!</div>
                 </div>
-                <div className="switch-container">
-                    <div className="switch-song">
-                        <button className="en-btn swt-btn">English</button>
-                        <button className="hi-btn swt-btn">Hindi</button>
-                        <button className="pu-btn swt-btn">Punjabi</button>
+                <div className="body-container">
+                    <div className="row">
+                        {songs.map((songs) => (
+                                <List songs={songs} />
+                            ))}
                     </div>
-                </div>
-                <div className="songs-list">
-                    
-                    <div class="lang-en">
-                        <div class="row">
-                            <div className="card col">
-                                <img className="card-img-top" src="https://wallpapercave.com/wp/wp3602192.jpg" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Lemon Boy</h5>
-                                    <p className="card-text">Artist&nbsp; - CaveTown<br />Genre - Indie Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://i.scdn.co/image/ab67616d0000b27388e3cda6d29b2552d4d6bc43" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Heather</h5>
-                                    <p className="card-text">Artist&nbsp; - Conan Gray<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://images.genius.com/ae3c78d485c51675dcbfa1653910ee0c.1000x1000x1.png" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Peaches</h5>
-                                    <p className="card-text">Artist&nbsp; - Justin Bieber<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://images.genius.com/b5a992fc23abc908c5581655bafbd622.640x640x1.jpg" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Stop This Train</h5>
-                                    <p className="card-text">Artist&nbsp; - John Mayer<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div className="card col">
-                                <img className="card-img-top" src="https://wallpapercave.com/wp/wp3602192.jpg" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Lemon Boy</h5>
-                                    <p className="card-text">Artist&nbsp; - CaveTown<br />Genre - Indie Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://i.scdn.co/image/ab67616d0000b27388e3cda6d29b2552d4d6bc43" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Heather</h5>
-                                    <p className="card-text">Artist&nbsp; - Conan Gray<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://images.genius.com/ae3c78d485c51675dcbfa1653910ee0c.1000x1000x1.png" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Peaches</h5>
-                                    <p className="card-text">Artist&nbsp; - Justin Bieber<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                            <div className="card col">
-                                <img className="card-img-top" src="https://images.genius.com/b5a992fc23abc908c5581655bafbd622.640x640x1.jpg" alt="Card image cap" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Stop This Train</h5>
-                                    <p className="card-text">Artist&nbsp; - John Mayer<br />Genre - Pop</p>
-                                    <a href="/" className="btn btn-primary" onClick={this.handleClicks} role="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3twredg0CXLmygHYWeSkYXsxjYdXxCXJ7qg&usqp=CAU" className="play-btn"/></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="row">
+                        {songs.map((songs) => (
+                                <List songs={songs} />
+                            ))}
                     </div>
-                </div>
-                <footer class="">
-                    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-                        <a href="localhost:3000"> YEEEET</a>
-                    </div>  
-                </footer>
+                </div>      
             </div>
+
         )
     }
-}
 
 export default Body;
