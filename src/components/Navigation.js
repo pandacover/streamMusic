@@ -8,13 +8,13 @@ function Navigation () {
                 <a className="navbar-brand">YEEEET</a>
                 <ul className="navbar-nav">
                 <li className="nav-item">
-                        <Link to="/" className="nav-link" href="#">Explore</Link>
+                        <Link to="/" className="nav-link">Explore</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/playlist" className="nav-link" href="#">Playlist</Link>
+                        <Link to="/playlist" className="nav-link">Playlist</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/about" className="nav-link" href="#">About</Link>
+                        <Link to="/about" className="nav-link">About</Link>
                     </li>
                 </ul>
             </nav>

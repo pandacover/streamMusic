@@ -20,7 +20,7 @@ export default function List(props) {
                 <div className="card-body">
                     <h5 className="card-title">{props.songs.name}</h5>
                     <p className="card-text">Artist&nbsp;: {props.songs.artist}<br />Genre: {props.songs.genre}</p>
-                    <Link to="#" class="" role="button" ><img className="play-btn" src="play.svg" alt="play" onClick={togglePopup} /></Link>
+                    <Link to="#" className="" role="button" ><img className="play-btn" src="play.svg" alt="play" onClick={togglePopup} /></Link>
                 </div>
             </div>
 
