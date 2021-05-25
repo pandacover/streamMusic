@@ -1,45 +1,34 @@
-
 .card {
-    width: 15rem;
-    margin: 10px 10px;
-    transition: box-shadow 0.3s;
+  width: 15rem;
+  margin: 10px 10px;
+  transition: box-shadow 0.3s;
 }
 
 .card-body .btn {
-    padding: 0;
-    width: 1.5em;
-    outline: 0;
+  padding: 0;
+  width: 1.5em;
+  outline: 0;
 }
 
-.btn-primary, .btn-primary:hover {
-    background: transparent;
-    border: none;
+.btn-primary,
+.btn-primary:hover {
+  background: transparent;
+  border: none;
 }
 
-
-.card-body Link{
-    background: white !important;
-    border: none;
-    color: black !important;
-    display: flex;
-    transition: display 1s;
+.card-body Link {
+  background: white !important;
+  border: none;
+  color: black !important;
+  display: flex;
+  transition: display 1s;
 }
 
 .play-btn {
-    width: 1.5em;
-    background: #fff !important;
-    border:0; 
-    text-decoration:none; 
-    outline:none;
-}
-
-.play-alert {
-    display: none;
-    width: 100%;
-    background: inherit;
-    color: inherit;
+  cursor: pointer;
+  width: 103%;
 }
 
 .card:hover {
-    box-shadow: 6px 6px 6px grey;
+  box-shadow: 6px 6px 6px grey;
 }

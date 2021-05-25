@@ -1,0 +1,71 @@
+{
+  "musicDB": [
+    {
+      "id": 1,
+      "name": "Lemon Boy",
+      "thumb": "https://wallpapercave.com/wp/wp3602192.jpg",
+      "artist": "Cavetown",
+      "genre": "Pop",
+      "url": "tracks/lemonboy.mp3"
+    },
+    {
+      "id": 2,
+      "name": "Stop this train",
+      "thumb": "https://m.media-amazon.com/images/I/51DcBk-hOFL._SS500_.jpg",
+      "artist": "Jonh Mayer",
+      "genre": "Pop",
+      "url": "tracks/train.mp3"
+    },
+    {
+      "id": 3,
+      "name": "Heather",
+      "thumb": "https://64.media.tumblr.com/0f5390ff383864b81222b004bedf914f/e8942750230f5bda-2b/s540x810/16f3c688e0d10c1b6c852c8d49e72b204f8ed117.png",
+      "artist": "Conan Gray",
+      "genre": "Pop",
+      "url": "tracks/heather.mp3"
+    }
+    ,
+    {
+      "id": 4,
+      "name": "Peaches",
+      "thumb": "https://www.the360report.com/wp-content/uploads/2021/05/Justin-Bieber-Peaches-artwork.png",
+      "artist": "Justin Bieber",
+      "genre": "Pop",
+      "url": "tracks/peaches.mp3"
+    },
+    {
+      "id": 5,
+      "name": "Talking to the moon",
+      "thumb": "https://i1.sndcdn.com/artworks-000409525110-vt3izn-t500x500.jpg",
+      "artist": "Bruno Mars",
+      "genre": "Pop and R&B",
+      "url": "tracks/themoon.mp3"
+    },
+    {
+      "id": 6,
+      "name": "Sick Boy",
+      "thumb": "https://upload.wikimedia.org/wikipedia/en/2/28/The_Chainsmokers_Sick_Boy.jpg",
+      "artist": "Chainsmokers",
+      "genre": "Pop",
+      "url": "tracks/sickboy.mp3"
+    },
+    {
+      "id": 7,
+      "name": "Monster",
+      "thumb": "https://upload.wikimedia.org/wikipedia/en/d/d0/Shawn_Mendes_and_Justin_Bieber_-_Monster.png",
+      "artist": "Justin Bieber & Shawn Mendes",
+      "genre": "Pop",
+      "url": "tracks/monster.mp3"
+    }
+    ,
+    {
+      "id": 8,
+      "name": "Radioactive",
+      "thumb": "https://cdns-images.dzcdn.net/images/cover/7e8314f4280cffde363547a495a260bc/350x350.jpg",
+      "artist": "Imagine Dragons",
+      "genre": "Pop",
+      "url": "tracks/radioactive.mp3"
+    }
+    
+  ]
+}
