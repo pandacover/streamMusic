@@ -1,0 +1,19 @@
+$primaryPlay: #000;
+
+.container {
+	bottom: 0;
+	width: 100%;
+	height: 5em;
+	position: sticky;
+	background-color: $primaryPlay;
+	color: #fff;
+
+	audio {
+		width: 100%;
+		background: #000;
+	}
+
+	div {
+		padding: 0 1em;
+	}
+}

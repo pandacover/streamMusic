@@ -1,0 +1,41 @@
+$primary-color: #967e76;
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 100%;
+	height: 4em;
+	display: flex;
+	margin: 2em 0;
+	padding: 0 1em;
+}
+
+.brandContainer {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	font-size: 32px;
+	font-weight: 900;
+	align-items: center;
+	color: $primary-color;
+	text-transform: uppercase;
+}
+
+.navContainer {
+	flex: 1;
+	height: 100%;
+
+	.navbar {
+		gap: 2em;
+		display: flex;
+		height: inherit;
+		align-items: center;
+		justify-content: end;
+	}
+}

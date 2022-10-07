@@ -1,0 +1,53 @@
+$primaryCard: #b7c4cf;
+
+.container {
+	gap: 0.5em;
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 2em;
+	display: flex;
+	flex-flow: column;
+	flex-basis: 180px;
+	aspect-ratio: 9/13;
+	position: relative;
+	border-radius: 0.2em;
+	background-color: $primaryCard;
+
+	&:hover .btnContainer {
+		opacity: 1;
+		bottom: 60px;
+	}
+}
+
+.image {
+	width: inherit;
+	background-color: blue;
+	flex: 3;
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+}
+
+.details {
+	flex: 1;
+	width: 100%;
+
+	.title {
+		font-weight: 600;
+	}
+
+	.artist {
+		font-size: 13px;
+	}
+}
+
+.btnContainer {
+	bottom: 0;
+	opacity: 0;
+	right: 5px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	transition: all 250ms linear 0ms;
+}
