@@ -1,4 +1,5 @@
 $primary-color: #967e76;
+$primaryLight: #d7c0ae;
 
 ul {
 	list-style-type: none;
@@ -8,12 +9,21 @@ a {
 	text-decoration: none;
 }
 
+button {
+	background-color: transparent;
+	font-size: 2rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
 .container {
 	width: 88%;
 	height: 4em;
 	display: flex;
 	padding: 0 1em;
 	margin: 2em auto;
+	position: relative;
 }
 
 .brandContainer {
@@ -37,5 +47,41 @@ a {
 		height: inherit;
 		align-items: center;
 		justify-content: end;
+	}
+}
+
+.menuOpen,
+.menuClose {
+	display: none;
+}
+
+@media screen and (max-width: 538px) {
+	.menuOpen {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.navContainer {
+		top: -2em;
+		width: 90%;
+		right: -100%;
+		z-index: 999;
+		height: 100vh;
+		position: absolute;
+		background: $primaryLight;
+		transition: all 150ms linear 0s;
+
+		.navbar {
+			flex-flow: column;
+			justify-content: center;
+		}
+
+		.menuClose {
+			display: block;
+		}
+	}
+
+	.navContainer.true {
+		right: -2em;
 	}
 }
