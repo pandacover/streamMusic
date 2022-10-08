@@ -5,12 +5,14 @@ export interface ContextType {
 		title: string;
 		artist: string;
 		source: string;
+		isAutoLoop?: boolean;
 	};
 	setCurrentSong: React.Dispatch<
 		React.SetStateAction<{
 			title: string;
 			artist: string;
 			source: string;
+			isAutoLoop?: boolean;
 		}>
 	>;
 }
@@ -20,6 +22,7 @@ const AudioContext = createContext<ContextType>({
 		title: "",
 		artist: "",
 		source: "",
+		isAutoLoop: false,
 	},
 	setCurrentSong: () => null,
 });

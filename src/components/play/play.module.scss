@@ -1,4 +1,4 @@
-$primaryPlay: #000;
+$primaryPlay: #141414;
 
 .container {
 	bottom: 0;
@@ -15,5 +15,11 @@ $primaryPlay: #000;
 
 	div {
 		padding: 0 1em;
+		display: flex;
+		gap: 2em;
+	}
+
+	input[type="checkbox"] {
+		cursor: pointer;
 	}
 }
