@@ -1,0 +1,18 @@
+$primaryBtn: #967e76;
+$white: #f9f9f9;
+
+.button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	outline: none;
+	display: flex;
+	color: $white;
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin-top: 0.9em;
+	border-radius: 50%;
+	align-items: center;
+	background: $primaryBtn;
+	justify-content: center;
+}

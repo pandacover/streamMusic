@@ -1,0 +1,29 @@
+$disclaimer: #703;
+$email: #294;
+
+.container {
+	margin: 0 auto;
+	width: 85.5%;
+	min-height: calc(100vh - 13em);
+}
+
+.brand {
+	font-size: 2em;
+	font-weight: 800;
+}
+
+.disclaimer {
+	text-decoration: underline;
+	color: $disclaimer;
+	font-style: italic;
+}
+
+.email {
+	text-decoration: underline;
+	color: $email;
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: 700;
+}

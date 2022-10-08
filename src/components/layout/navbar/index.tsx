@@ -6,7 +6,7 @@ const Navbar = () => {
 	return (
 		<header className={styles.container}>
 			<div className={styles.brandContainer}>
-				<span>Brand Name</span>
+				<span>Drip Music</span>
 			</div>
 			<nav className={styles.navContainer}>
 				<ul className={styles.navbar}>

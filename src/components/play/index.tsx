@@ -1,6 +1,7 @@
 import styles from "./play.module.scss";
 import { AudioContext } from "../../lib";
 import { useContext, useState } from "react";
+import { ImLoop } from "react-icons/im";
 
 const Play = () => {
 	const {
@@ -10,30 +11,32 @@ const Play = () => {
 
 	const [isCheckboxTrue, setIsCheckboxTrue] = useState(false);
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
-		setIsCheckboxTrue(e.currentTarget.checked);
+		setIsCheckboxTrue(!isCheckboxTrue);
 		setCurrentSong({
 			artist,
 			title,
 			source,
-			isAutoLoop: e.currentTarget.checked,
+			isAutoLoop: !isCheckboxTrue,
 		});
 	};
 	return (
 		<div className={styles.container}>
 			<audio src={source} controls autoPlay loop={isAutoLoop} />
-			<div>
+			<div className={styles.innerContainer}>
 				<p>
 					{artist} - {title}
 				</p>
 				<div>
 					<input
 						type='checkbox'
-						checked={isCheckboxTrue}
-						onChange={(e) => handleChange(e)}
+						defaultChecked={isCheckboxTrue}
+						id='loopCheckbox'
 					/>
-					AutoLoop
+					<button onClick={(e) => handleChange(e)}>
+						<ImLoop />
+					</button>
 				</div>
 			</div>
 		</div>

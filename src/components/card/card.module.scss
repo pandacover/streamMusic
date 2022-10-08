@@ -15,7 +15,7 @@ $primaryCard: #b7c4cf;
 
 	&:hover .btnContainer {
 		opacity: 1;
-		bottom: 60px;
+		bottom: 20px;
 	}
 }
 
@@ -46,9 +46,14 @@ $primaryCard: #b7c4cf;
 .btnContainer {
 	bottom: 0;
 	opacity: 0;
-	right: 5px;
+	right: 0px;
 	width: 50px;
-	height: 50px;
+	height: fit-content;
 	position: absolute;
 	transition: all 250ms linear 0ms;
+
+	div {
+		width: fit-content;
+		margin: 0 auto;
+	}
 }
