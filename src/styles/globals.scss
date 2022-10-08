@@ -34,3 +34,9 @@ a.active-link {
 		opacity: 1;
 	}
 }
+
+@media screen and (max-width: 538px) {
+	body {
+		overflow-x: hidden;
+	}
+}
