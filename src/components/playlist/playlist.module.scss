@@ -1,11 +1,17 @@
 .container {
-	gap: 4em;
-	width: 100%;
-	display: flex;
-	min-height: calc(100vh - 13em);
+	width: 90%;
 	margin: 0 auto;
-	flex-wrap: wrap;
-	padding: 2em 1em;
+	padding: 2em 0;
 	padding-bottom: 8em;
-	justify-content: center;
+	background-image: linear-gradient(to bottom, transparent, #000);
+}
+
+.empty {
+	text-align: center;
+}
+
+.playlistContainer {
+	gap: 2em;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }

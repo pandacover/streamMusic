@@ -1,29 +1,20 @@
 import { createContext } from "react";
 
+export interface CurrentSongInterface {
+	title: string;
+	artist: string;
+	source: string;
+	image: string;
+	isAutoLoop?: boolean;
+}
+
 export interface ContextType {
-	currentSong: {
-		title: string;
-		artist: string;
-		source: string;
-		isAutoLoop?: boolean;
-	};
-	setCurrentSong: React.Dispatch<
-		React.SetStateAction<{
-			title: string;
-			artist: string;
-			source: string;
-			isAutoLoop?: boolean;
-		}>
-	>;
+	currentSong: CurrentSongInterface;
+	setCurrentSong: React.Dispatch<React.SetStateAction<CurrentSongInterface>>;
 }
 
 const AudioContext = createContext<ContextType>({
-	currentSong: {
-		title: "",
-		artist: "",
-		source: "",
-		isAutoLoop: false,
-	},
+	currentSong: { title: "", artist: "", source: "", image: "" },
 	setCurrentSong: () => null,
 });
 

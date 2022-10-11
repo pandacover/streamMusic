@@ -11,9 +11,10 @@ const About = () => {
 			<span className={styles.bold}>does not own</span> any of the song listed
 			in the website. If you are the original owner of any song listed in the
 			website and want to take it down, email me at{" "}
-			<span className={styles.email}>inquiries.brandname@gmail.com</span>. You
-			are requested to not copyright the website down as it may take a lot of
-			resources to lift it up again. Thankyou!
+			<span className={styles.email}>inquiries.dripmusic@gmail.com</span>.
+			<br />
+			You are requested to not copyright the website down as it may take a lot
+			of resources to lift it up again. Thankyou!
 		</div>
 	);
 };

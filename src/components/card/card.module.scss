@@ -1,59 +1,52 @@
-$primaryCard: #b7c4cf;
+$primaryCard: #f9f9f9;
 
 .container {
-	gap: 0.5em;
 	width: 100%;
-	padding: 1em;
-	margin-bottom: 2em;
 	display: flex;
-	flex-flow: column;
-	flex-basis: 180px;
-	aspect-ratio: 9/13;
-	position: relative;
+	aspect-ratio: 12/4;
+	margin-bottom: 2em;
 	border-radius: 0.2em;
 	background-color: $primaryCard;
-
-	&:hover .btnContainer {
-		opacity: 1;
-		bottom: 20px;
-	}
 }
 
-.image {
-	width: inherit;
-	background-color: $primaryCard;
-	flex: 3;
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+.contentContainer {
+	flex: 2;
+	padding: 10px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .details {
-	flex: 1;
 	width: 100%;
+	color: #000;
 
 	.title {
 		font-weight: 600;
 	}
-
 	.artist {
-		font-size: 13px;
+		font-size: 12px;
+		color: #0008;
 	}
 }
 
 .btnContainer {
-	bottom: 0;
-	opacity: 0;
-	right: 0px;
-	width: 50px;
-	height: fit-content;
-	position: absolute;
-	transition: all 250ms linear 0ms;
+	gap: 0.3em;
+	display: flex;
+}
 
-	div {
-		width: fit-content;
-		margin: 0 auto;
+.imageContainer {
+	flex: 1;
+	width: 100%;
+	aspect-ratio: 1/1;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 0 4px 4px 0;
 	}
 }

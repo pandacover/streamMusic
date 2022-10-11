@@ -1,6 +1,6 @@
 import {
-	MdLibraryAdd as PlaylistIcon,
-	MdLibraryAddCheck as PlaylistIconCheck,
+	MdAdd as PlaylistIcon,
+	MdDone as PlaylistIconCheck,
 } from "react-icons/md";
 import styles from "./addbtn.module.scss";
 import { PlaylistContext } from "../../../lib";
@@ -57,7 +57,8 @@ export const AddBtn = ({ song }: PropsType) => {
 			}}
 			className={styles.button}
 		>
-			{existInPlaylist ? <PlaylistIconCheck /> : <PlaylistIcon />}
+			<span>{existInPlaylist ? <PlaylistIconCheck /> : <PlaylistIcon />}</span>
+			<span>{existInPlaylist ? "Added" : "Add"} to Playlist</span>
 		</button>
 	);
 };

@@ -1,5 +1,6 @@
 $primary-color: #967e76;
 $primaryLight: #d7c0ae;
+$primarySearch: #fff;
 
 ul {
 	list-style-type: none;
@@ -18,31 +19,53 @@ button {
 }
 
 .container {
-	width: 88%;
+	width: 90%;
 	height: 4em;
-	display: flex;
-	padding: 0 1em;
+	display: grid;
 	margin: 2em auto;
 	position: relative;
+	place-content: center;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "brand search navbar";
 }
 
 .brandContainer {
-	flex: 1;
 	height: 100%;
 	display: flex;
 	font-size: 32px;
 	font-weight: 900;
+	grid-area: "brand";
 	align-items: center;
 	color: $primary-color;
 	text-transform: uppercase;
 }
 
-.navContainer {
-	flex: 1;
+.searchContainer {
 	height: 100%;
+	display: flex;
+	grid-area: "search";
+	align-items: center;
+
+	input[type="text"] {
+		width: 100%;
+		height: 70%;
+		border: none;
+		outline: none;
+		display: block;
+		padding: 2px 12px;
+		border-radius: 4px;
+		color: $primarySearch;
+		background-color: #fff2;
+	}
+}
+
+.navContainer {
+	height: 100%;
+	grid-area: "navbar";
 
 	.navbar {
 		gap: 2em;
+		width: 100%;
 		display: flex;
 		height: inherit;
 		align-items: center;

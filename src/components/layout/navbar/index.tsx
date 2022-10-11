@@ -1,11 +1,11 @@
 import styles from "./navbar.module.scss";
 import { NavbarItems } from "./navbar-items";
-import { ActiveLink } from "../../../lib";
+import { ActiveLink, SearchContext } from "../../../lib";
 import {
 	CgMenuMotion as MenuIconOpen,
 	CgClose as MenuIconClose,
 } from "react-icons/cg";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +13,19 @@ const Navbar = () => {
 		e.preventDefault();
 		setIsMenuOpen(!isMenuOpen);
 	};
+	const { setSearchParams } = useContext(SearchContext);
+
 	return (
 		<header className={styles.container}>
 			<div className={styles.brandContainer}>
 				<span>Drip Music</span>
+			</div>
+			<div className={styles.searchContainer}>
+				<input
+					type='text'
+					placeholder='Search for Artist or Songs'
+					onChange={(e) => setSearchParams(e.currentTarget.value)}
+				/>
 			</div>
 			<div className={styles.menuOpen}>
 				<button onClick={(e) => toggleMenu(e)}>

@@ -1,18 +1,28 @@
-$primaryBtn: #967e76;
+$primaryBtn: #000;
 $white: #f9f9f9;
 
 .button {
-	width: 40px;
-	height: 40px;
+	gap: 0.1em;
+	height: 30px;
 	border: none;
 	outline: none;
 	display: flex;
 	color: $white;
-	font-size: 1.5rem;
+	padding: 12px;
 	cursor: pointer;
-	margin-top: 0.9em;
-	border-radius: 50%;
+	min-width: 150px;
+	border-radius: 4px;
 	align-items: center;
-	background: $primaryBtn;
 	justify-content: center;
+	background: $primaryBtn;
+
+	span:first-child {
+		line-height: 0;
+		font-size: 16px;
+	}
+
+	span:nth-child(2) {
+		font-size: 10px;
+		text-transform: uppercase;
+	}
 }

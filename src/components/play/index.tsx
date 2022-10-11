@@ -2,6 +2,7 @@ import styles from "./play.module.scss";
 import { AudioContext } from "../../lib";
 import { useContext, useState } from "react";
 import { ImLoop } from "react-icons/im";
+import Audio from "./audio";
 
 const Play = () => {
 	const {
@@ -23,7 +24,9 @@ const Play = () => {
 	};
 	return (
 		<div className={styles.container}>
-			<audio src={source} controls autoPlay loop={isAutoLoop} />
+			<Audio isLoop={isAutoLoop} source={source}>
+				Your browser does not support the HTML5 audio tag.
+			</Audio>
 			<div className={styles.innerContainer}>
 				<p>
 					{artist} - {title}

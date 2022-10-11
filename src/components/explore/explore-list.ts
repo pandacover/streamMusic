@@ -10,7 +10,7 @@ export const ExploreList = [
 		id: "explore-item-2",
 		title: "Stop this train",
 		image: "https://m.media-amazon.com/images/I/51DcBk-hOFL._SS500_.jpg",
-		artist: "Jonh Mayer",
+		artist: "John Mayer",
 		source: "/tracks/train.mp3",
 	},
 	{

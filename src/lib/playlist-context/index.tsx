@@ -1,13 +1,15 @@
 import { createContext } from "react";
 
-export interface ContextType {
-	playlist: {
-		id: string;
-		title: string;
-		artist: string;
-		source: string;
-		image: string;
-	}[];
+export interface PlaylistType {
+	id: string;
+	title: string;
+	artist: string;
+	source: string;
+	image: string;
+}
+
+export type ContextType = {
+	playlist: Array<PlaylistType>;
 	setPlaylist: React.Dispatch<
 		React.SetStateAction<
 			{
@@ -19,10 +21,10 @@ export interface ContextType {
 			}[]
 		>
 	>;
-}
+};
 
 const PlaylistContext = createContext<ContextType>({
-	playlist: [{ id: "", title: "", artist: "", source: "", image: "" }],
+	playlist: new Array<PlaylistType>(),
 	setPlaylist: () => null,
 });
 
