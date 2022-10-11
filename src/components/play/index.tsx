@@ -16,9 +16,10 @@ const Play = () => {
 		e.preventDefault();
 		setIsCheckboxTrue(!isCheckboxTrue);
 		setCurrentSong({
-			artist,
-			title,
-			source,
+			artist: "",
+			title: "",
+			source: "",
+			image: "",
 			isAutoLoop: !isCheckboxTrue,
 		});
 	};
