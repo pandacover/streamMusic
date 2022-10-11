@@ -18,93 +18,60 @@ button {
 	cursor: pointer;
 }
 
+.header {
+	height: 150px;
+	padding: 2em 0;
+	margin: 0 auto;
+	min-width: 100%;
+	max-width: 1360px;
+	position: relative;
+}
+
 .container {
 	width: 90%;
-	height: 4em;
-	display: grid;
-	margin: 2em auto;
-	position: relative;
-	place-content: center;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas: "brand search navbar";
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.navbarContainer,
+.searchContainer {
+	flex: 1;
+	height: 100%;
 }
 
 .brandContainer {
-	height: 100%;
 	display: flex;
-	font-size: 32px;
+	font-size: 40px;
 	font-weight: 900;
-	grid-area: "brand";
 	align-items: center;
 	color: $primary-color;
 	text-transform: uppercase;
 }
 
 .searchContainer {
-	height: 100%;
 	display: flex;
-	grid-area: "search";
 	align-items: center;
-
+	justify-content: end;
 	input[type="text"] {
-		width: 100%;
-		height: 70%;
+		width: 60%;
+		height: 60%;
 		border: none;
 		outline: none;
 		display: block;
-		padding: 2px 12px;
-		border-radius: 4px;
+		padding: 2px 16px;
+		border-radius: 25px;
 		color: $primarySearch;
-		background-color: #fff2;
+		background-color: #fff1;
 	}
 }
 
 .navContainer {
-	height: 100%;
-	grid-area: "navbar";
-
 	.navbar {
 		gap: 2em;
 		width: 100%;
 		display: flex;
 		height: inherit;
 		align-items: center;
-		justify-content: end;
-	}
-}
-
-.menuOpen,
-.menuClose {
-	display: none;
-}
-
-@media screen and (max-width: 538px) {
-	.menuOpen {
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
-	.navContainer {
-		top: -2em;
-		width: 90%;
-		right: -100%;
-		z-index: 999;
-		height: 100vh;
-		position: absolute;
-		background: $primaryLight;
-		transition: all 150ms linear 0s;
-
-		.navbar {
-			flex-flow: column;
-			justify-content: center;
-		}
-
-		.menuClose {
-			display: block;
-		}
-	}
-
-	.navContainer.true {
-		right: -2em;
 	}
 }

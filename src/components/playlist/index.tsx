@@ -1,15 +1,20 @@
 import Card from "../card";
 import React, { useContext, useState, useEffect } from "react";
-import { PlaylistContext } from "../../lib";
+import { PlaylistContext, SearchContext } from "../../lib";
 import styles from "./playlist.module.scss";
 
 const Playlist = () => {
 	const { playlist } = useContext(PlaylistContext);
+	const { searchParams } = useContext(SearchContext);
 	const [isPlaylistEmpty, setIsPlaylistEmpty] = useState(false);
+	const [searchRegex, setSearchRegex] = useState(new RegExp("\\w+"));
 
 	useEffect(() => {
 		setIsPlaylistEmpty(playlist.length <= 0);
-	}, [playlist]);
+		if (searchParams.length > 0)
+			setSearchRegex(new RegExp(searchParams.toString(), "i"));
+		else setSearchRegex(new RegExp("\\w+"));
+	}, [playlist, searchParams]);
 	console.log(playlist);
 	return (
 		<div className={styles.container}>
@@ -18,7 +23,10 @@ const Playlist = () => {
 			)}
 			<div className={styles.playlistContainer}>
 				{playlist.map((song) => (
-					<Card song={song} key={song.id} />
+					<React.Fragment key={song.id}>
+						{(song.title.match(searchRegex) ||
+							song.artist.match(searchRegex)) && <Card song={song} />}
+					</React.Fragment>
 				))}
 			</div>
 		</div>

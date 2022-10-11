@@ -1,5 +1,4 @@
 import Navbar from "./navbar";
-import Play from "../play";
 import { AudioContext, PlaylistContext, SearchContext } from "../../lib";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -29,9 +28,13 @@ const Layout = ({ children }: PropsType) => {
 				<SearchContext.Provider value={{ searchParams, setSearchParams }}>
 					<Navbar />
 					<main
-						style={{ position: "relative", minHeight: "calc(100vh - 8em)" }}
+						style={{
+							position: "relative",
+							height: "calc(100vh - 8em)",
+							minHeight: "calc(100vh - 8em)",
+						}}
 					>
-						<div>{children}</div>
+						{children}
 						{/* {currentLocation.pathname !== "/about" && <Play />} */}
 					</main>
 				</SearchContext.Provider>
